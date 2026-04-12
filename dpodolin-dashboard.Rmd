@@ -7,7 +7,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-library(flexdashboard)
+library(flexdashboard) 
 library(dplyr)
 library(ggplot2)
 library(lubridate)
@@ -30,7 +30,7 @@ seat[92, 9] = "3x3"
 Column {data-width=550}
 -----------------------------------------------------------------------
 
-### Аэропорты, с оценкой чистоты меньше, чем в соответсвующих лаунж зонах 
+### Аэропорты, с оценкой чистоты меньше, чем в соответсвующих лаунж зонах а
 
 ```{r}
 loun = lounge %>% select(title = airport, cleanliness_rating,lounge_name)
