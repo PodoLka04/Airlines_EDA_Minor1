@@ -1,3 +1,11 @@
+# 🌐 Language / Язык
+
+[🇬🇧 English](#english) | [🇷🇺 Русский](#russian)
+
+---
+
+## <a name="russian"></a> 🇷🇺 Русский
+
 # Разведочный анализ данных авиакомпаний и аэропортов
 
 ## 📌 О проекте
@@ -13,7 +21,7 @@
 **Источник данных:**  
 [Skytrax reviews dataset](https://github.com/quankiquanki/skytrax-reviews-dataset/blob/master/README.md)
 
-> ⚠️ **Важно:** Хоть и источник данных находится в открытом доступе и приведен выше, исходные данные для приведенной работы (то есть конкретная выборка) хранились на университетском сервере, доступ к которому в настоящее время отсутствует.  
+> ⚠️ **Важно:** Хоть источник данных находится в открытом доступе и приведен выше, исходные данные для приведенной работы (то есть конкретная выборка) хранились на университетском сервере, доступ к которому в настоящее время отсутствует.  
 > Поэтому **Rmd-код не может быть выполнен**, но результаты исследования сохранены в HTML-отчёте и дашборде.
 
 ---
@@ -23,7 +31,7 @@
 | Файл | Описание |
 |------|----------|
 | `analysis.Rmd` | Исходный код на R отчёта |
-| `dashboard.html` | **Показательный дашборд**  с ключевыми метриками |
+| `dashboard.html` | **Показательный дашборд** с ключевыми метриками |
 | `dashboard_code.Rmd` | Исходный код дашборда |
 | `report.html` | **HTML-отчёт** с разведочным анализом, графиками и выводами |
 | `Задание.png` | Скриншот задания с платформы ВШЭ |
@@ -86,3 +94,96 @@
 
 Подолин Дмитрий   
 НИУ ВШЭ, курс "Исследование данных и визуализация"
+
+---
+
+## <a name="english"></a> 🇬🇧 English
+
+# Exploratory Data Analysis of Airlines and Airports
+
+## 📌 About the project
+
+The project was completed as part of the **"Data Research and Visualization"** course (HSE Minor, 1st semester).
+
+**Task:**  
+Based on data on the performance of airports and airlines (Skytrax reviews), conduct an exploratory analysis and answer the client's questions:
+
+- what problems exist in air transportation  
+- what improvements can be proposed based on the data findings
+
+**Data source:**  
+[Skytrax reviews dataset](https://github.com/quankiquanki/skytrax-reviews-dataset/blob/master/README.md)
+
+> ⚠️ **Important:** Although the data source is publicly available and provided above, the specific dataset used for this work was stored on a university server that is currently inaccessible.  
+> Therefore, **the Rmd code cannot be executed**, but the results are preserved in the HTML report and dashboard.
+
+---
+
+## 📁 Repository contents
+
+| File | Description |
+|------|-------------|
+| `analysis.Rmd` | R source code for the report |
+| `dashboard.html` | **Demonstration dashboard** with key metrics |
+| `dashboard_code.Rmd` | Dashboard source code |
+| `report.html` | **HTML report** with exploratory analysis, graphs, and conclusions |
+| `Задание.png` | Screenshot of the assignment from the HSE platform |
+| `Оценка_отзыв.png` | Screenshot of the grade from the HSE platform |
+
+---
+
+## 🔍 What was done
+
+### Analysis (3 research questions)
+
+| Question | Conclusion |
+|----------|------------|
+| **1.** Is it true that seat width ratings are higher for flights taken in summer? | **No.** In summer, seat width ratings are lower than in other months. |
+| **2.** Which aircraft have higher legroom comfort ratings — those with two aisles or one? | **Two aisles.** Comfort is higher. |
+| **3.** Which lounges are rated higher for cleanliness than the airports they are located in? | **217** such airports were identified. The report includes the top 5 with the largest rating differences. |
+
+### Dashboard (flexdashboard)
+
+Includes:
+
+- **ValueBox:** preferred number of aisles (answer to question 2)
+- **ValueBox:** number of airports where lounge cleanliness exceeds airport cleanliness (217)
+- **Boxplot:** distribution of seat width ratings by season
+- **Bar chart:** top 5 airports with the largest difference between lounge and airport cleanliness ratings
+
+---
+
+## 🎓 Grade and instructor feedback
+
+**Grade:** 9.5 / 10.0  
+**Instructor:** Alena V. Suvorova  
+
+**Feedback:**  
+> *Excellent work! Clear logic, good graphics.*
+
+**Comments addressed in the final version:**
+- Question 3: instead of referencing a variable (`otv`), a **top-5** airports with the largest rating difference is shown
+- Color scheme improved (better contrast, removed gray outline from purple bars)
+
+---
+
+## 🚀 How to view the results
+
+- Open **`report.html`** in your browser — full report with conclusions  
+- Open **`dashboard.html`** — interactive dashboard with key metrics
+
+---
+
+## 🛠 Tools
+
+- R  
+- dplyr, ggplot2, lubridate, stringr  
+- flexdashboard  
+- html_document
+
+---
+
+## 📌 Author
+
+Dmitrii Podolin  
+HSE University, "Data Research and Visualization" course
